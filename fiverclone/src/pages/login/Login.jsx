@@ -22,6 +22,7 @@ function Login() {
         { withCredentials: true }
       );
       localStorage.setItem("currentUser", JSON.stringify(res.data));
+    
       navigate("/");
     } catch (error) {
       setError(error.response.data);
